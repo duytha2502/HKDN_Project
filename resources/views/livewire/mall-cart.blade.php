@@ -12,7 +12,6 @@
                             <thead>
                                 <tr>
                                     <th>remove</th>
-                                    <th>images</th>
                                     <th>Product</th>
                                     <th>Price</th>
                                     <th>Quantity</th>
@@ -26,14 +25,11 @@
                                     <td class="product-remove">
                                         <a href="{{ route('cart.destroy', $item['id']) }}"><i
                                                 class="pe-7s-close"></i></a>
-
                                     </td>
 
-                                    <td class="product-thumbnail">
-                                        <a href="{{ route('products.show', $product) }}">
-                                            <img src="{{$product->cover_img}}" alt="">
-                                        </a>
-                                    </td>
+                                    <!-- <td class="product-thumbnail"><a href="#"></a>
+                                        <img src="" alt="">
+                                    </td> -->
                                     <td class="product-name"><a href="#">{{ $item['name'] }} </a></td>
                                     <td class="product-price-cart"><span
                                             class="amount">${{Cart::session(auth()->id())->get($item['id'])->getPriceSum()}}</span>

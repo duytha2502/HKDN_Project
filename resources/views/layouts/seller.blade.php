@@ -23,7 +23,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/android-icon-96x96.png">s
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/android-icon-96x96.png">
 </head>
 
 <body>
@@ -117,7 +117,7 @@
             {{session('error')}}
         </div>
         @endif
-
+        <br>
         <main class="py-4 container-fluid">
             <div class="row">
                 <div class="col-3">

@@ -22,8 +22,6 @@ class CartController extends Controller
             'associatedModel' => $product
         ));
 
-
-
         return redirect()->route('cart.index');
 
     }
@@ -33,7 +31,7 @@ class CartController extends Controller
 
         $cartItems = \Cart::session(auth()->id())->getContent();
 
-
+        // @dd($cartItems);
         return view('cart.index', compact('cartItems'));
     }
 

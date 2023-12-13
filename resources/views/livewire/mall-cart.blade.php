@@ -1,3 +1,4 @@
+@section('content')
 <div>
     {{-- In work, do what you enjoy. --}}
 
@@ -30,8 +31,8 @@
                                     </td>
 
                                     <td class="product-thumbnail">
-                                        <a href="{{ route('products.show', $product) }}">
-                                            <img src="{{$product->cover_img}}" alt="">
+                                        <a href="#">
+                                            <img src="" alt="">
                                         </a>
                                     </td>
                                     <td class="product-name"><a href="#">{{ $item['name'] }} </a></td>
@@ -80,3 +81,4 @@
 
 
 </div>
+@endsection

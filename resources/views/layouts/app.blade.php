@@ -20,10 +20,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/android-icon-96x96.png">
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -35,7 +39,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-
                         @can('seller')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('shops.create') }}">Open Your Shop</a>
@@ -47,7 +50,7 @@
                     <ul class="navbar-nav ml-auto">
 
                          <li class="nav-item mr-2">
-                            <a class="nav-link p-0 m-0" href="{{ route('cart.index') }}">
+                            <!-- <a class="nav-link p-0 m-0" href="{{ route('cart.index') }}">
                                 <i class="fas fa-cart-arrow-down text-success fa-2x"></i>
                                     <div class="badge badge-danger">
                                         @auth
@@ -56,15 +59,15 @@
                                         0
                                         @endauth
                                     </div>
-                            </a>
+                            </a> -->
                         </li>
 
 
                         <!-- Authentication Links -->
                         @guest
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                            </li>
+                            </li> -->
                             @if (Route::has('register'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
@@ -93,25 +96,31 @@
                 </div>
             </div>
         </nav>
-
-        {{-- display success message --}}
-        @if(session()->has('message'))
-            <div class="alert alert-success text-center" role="alert">
-               {{session('message')}}
+        <br>
+        <div style="margin-left:5%">
+            <div class="block-banner-img">
+                <img class="login-banner-img" src="./assets/img/banner/loginbanner.jpg" alt="">
             </div>
-        @endif
 
-        {{-- display error message --}}
+            {{-- display success message --}}
+            @if(session()->has('message'))
+                <div class="alert alert-success text-center" role="alert">
+                    {{session('message')}}
+                </div>
+            @endif
 
-        @if(session()->has('error'))
-        <div class="alert alert-danger text-center" role="alert">
-            {{session('error')}}
+            {{-- display error message --}}
+
+            @if(session()->has('error'))
+            <div class="alert alert-danger text-center" role="alert">
+                {{session('error')}}
+            </div>
+            @endif
+
+            <main class="py-4 container">
+                @yield('content')
+            </main>
         </div>
-        @endif
-
-        <main class="py-4 container">
-            @yield('content')
-        </main>
     </div>
 </body>
 </html>

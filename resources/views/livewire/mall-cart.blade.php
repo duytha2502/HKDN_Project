@@ -13,7 +13,6 @@
                             <thead>
                                 <tr>
                                     <th>remove</th>
-                                    <th>images</th>
                                     <th>Product</th>
                                     <th>Price</th>
                                     <th>Quantity</th>
@@ -30,11 +29,11 @@
 
                                     </td>
 
-                                    <td class="product-thumbnail">
+                                    {{-- <td class="product-thumbnail">
                                         <a href="#">
                                             <img src="" alt="">
                                         </a>
-                                    </td>
+                                    </td> --}}
                                     <td class="product-name"><a href="#">{{ $item['name'] }} </a></td>
                                     <td class="product-price-cart"><span
                                             class="amount">${{Cart::session(auth()->id())->get($item['id'])->getPriceSum()}}</span>

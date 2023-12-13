@@ -21,7 +21,7 @@ class MallCart extends Component
     public function onCartUpdate()
     {
 
-        // $this->cartItems = \Cart::session(auth()->id())->getContent()->toArray();
+        $this->cartItems = \Cart::session(auth()->id())->getContent()->toArray();
         $this->mount();
 
 

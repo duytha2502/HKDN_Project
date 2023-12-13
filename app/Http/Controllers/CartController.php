@@ -21,12 +21,11 @@ class CartController extends Controller
             'attributes' => array(),
             'associatedModel' => $product
         ));
-
         return redirect()->route('cart.index');
 
     }
 
-    public function index()
+    public function index(Product $product)
     {
 
         $cartItems = \Cart::session(auth()->id())->getContent();

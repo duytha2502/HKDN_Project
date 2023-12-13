@@ -97,6 +97,7 @@
             </div>
         </nav>
         <br>
+        <br>
         <div style="margin-left:5%">
             <div class="block-banner-img">
                 <img class="login-banner-img" src="./assets/img/banner/loginbanner.jpg" alt="">
@@ -117,7 +118,7 @@
             </div>
             @endif
 
-            <main class="py-4 container">
+            <main class="py-4 container login">
                 @yield('content')
             </main>
         </div>

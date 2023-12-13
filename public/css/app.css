@@ -80,6 +80,11 @@ body {
   float:left;
 }
 
+.login {
+  width: 50%;
+  float: right;
+}
+
 .login-banner-img{
   width: 100%;
 }
@@ -584,12 +589,13 @@ pre code {
 }
 
 .container {
-  width: 100%;
+  /* width: auto; */
   /* padding-right: 15px;
   padding-left: 15px; */
   margin-right: auto;
   margin-left: auto;
-  float: right;
+  /* float: right; */
+
 }
 
 @media (min-width: 576px) {
@@ -4768,7 +4774,8 @@ input[type=button].btn-block {
           align-items: center;
   -webkit-box-pack: justify;
           justify-content: space-between;
-  padding: 0.5rem 1rem;
+  padding: 1rem 0.5rem;
+  margin-top: 1%;
 }
 
 .navbar .container,
@@ -4794,6 +4801,9 @@ input[type=button].btn-block {
   font-size: 1.125rem;
   line-height: inherit;
   white-space: nowrap;
+  position: absolute;
+  left: 10%;
+  top: 10%;
 }
 
 .navbar-brand:hover,
@@ -4810,6 +4820,9 @@ input[type=button].btn-block {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  position: absolute;
+  right: 10%;
+  top: 10%;
 }
 
 .navbar-nav .nav-link {
@@ -5409,6 +5422,7 @@ input[type=button].btn-block {
   text-align: center;
   font-weight: bolder;
   font-size: 1rem;
+  margin:0;
 }
 
 
@@ -9221,8 +9235,6 @@ button.bg-dark:focus {
 .pt-4,
 .py-4 {
   padding-top: 1.5rem !important;
-  float: right;
-  width: 50%;
 }
 
 .pr-4,

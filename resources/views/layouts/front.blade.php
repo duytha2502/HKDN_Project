@@ -41,20 +41,28 @@
                         <li><i class="pe-7s-call"></i> +0788024737</li>
                         <li><i class="pe-7s-mail"></i> <a href="#">darkteam@gmail.com</a></li>
                     </ul>
+                    <ul class="navbar-nav mr-auto">
+                                       
+                    </ul>
                 </div>
                 <div class="electronics-login-register">
                     <ul>
+                        @if (auth()->guard('web')->user() && auth()->guard('web')->user()->role_id == 2)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('shops.create') }}">Open Your Shop</a>
+                        </li>
+                        @endif
                         <li><a href="#"><i class="pe-7s-users"></i>My Account</a></li>
-                        <li><a data-toggle="modal" data-target="#exampleCompare" href="#"><i
+                        {{-- <li><a data-toggle="modal" data-target="#exampleCompare" href="#"><i
                                     class="pe-7s-repeat"></i>Compare</a></li>
-                        {{-- <li><a href="wishlist.html"><i class="pe-7s-like"></i>Wishlist</a></li> --}}
+                        <li><a href="wishlist.html"><i class="pe-7s-like"></i>Wishlist</a></li> --}}
 
                         @auth
                         <li>
-                                <form action=" {{ url('/logout') }} " method="POST">
-                                    @csrf
+                            <form action=" {{ url('/logout') }} " method="POST">
+                                @csrf
                                     <input type="submit" value="Logout" />
-                                </form>
+                            </form>
                         </li>
                             @else
 
@@ -196,8 +204,8 @@
                             <div class="footer-widget-content-3">
                                 <ul>
                                     <li><a href="login.html">Login Hare</a></li>
-                                    <li><a href="cart.html">Cart History</a></li>
-                                    <li><a href="checkout.html"> Payment History</a></li>
+                                    <li><a href="cart">Cart History</a></li>
+                                    <li><a href="checkout"> Payment History</a></li>
                                     <li><a href="shop.html">Product Tracking</a></li>
                                     <li><a href="register.html">Register</a></li>
                                 </ul>

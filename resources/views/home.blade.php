@@ -3,7 +3,6 @@
 @section('content')
 
 <div class="pl-200 pr-200 overflow clearfix">
-
     <div class="categori-menu-slider-wrapper clearfix">
         <div class="categories-menu">
 

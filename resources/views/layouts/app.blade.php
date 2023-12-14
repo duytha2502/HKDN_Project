@@ -23,6 +23,8 @@
     
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/android-icon-96x96.png">
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
 </head>
 <body>
     <div id="app">
@@ -39,11 +41,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        @can('seller')
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('shops.create') }}">Open Your Shop</a>
-                            </li>
-                        @endcan
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -98,10 +95,6 @@
         </nav>
         <br>
         <br>
-        <div style="margin-left:5%">
-            <div class="block-banner-img">
-                <img class="login-banner-img" src="./assets/img/banner/loginbanner.jpg" alt="">
-            </div>
 
             {{-- display success message --}}
             @if(session()->has('message'))
@@ -118,7 +111,7 @@
             </div>
             @endif
 
-            <main class="py-4 container login">
+            <main class="py-4 container">
                 @yield('content')
             </main>
         </div>

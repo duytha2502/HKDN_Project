@@ -2,16 +2,12 @@
 
 
 @section('content')
-
+<div class="cart-checkout-block">
 <h2>Checkout</h2>
-
-
 <h3>Shipping Information</h3>
 
 <form action="{{route('orders.store')}}" method="post">
     @csrf
-
-
     <div class="form-group">
         <label for="">Full Name</label>
         <input type="text" name="shipping_fullname" id="" class="form-control">
@@ -67,6 +63,7 @@
 
 
 </form>
+</div>
 
 
 @endsection

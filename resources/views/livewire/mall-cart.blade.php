@@ -13,6 +13,7 @@
                             <thead>
                                 <tr>
                                     <th>remove</th>
+                                    <th>Image</th>
                                     <th>Product</th>
                                     <th>Price</th>
                                     <th>Quantity</th>
@@ -28,9 +29,9 @@
                                                 class="pe-7s-close"></i></a>
                                     </td>
 
-                                    <!-- <td class="product-thumbnail"><a href="#"></a>
-                                        <img src="" alt="">
-                                    </td> -->
+                                    <td class="product-thumbnail"><a href="#"></a>
+                                        <img style="width: 100%" src="{{ $item['associatedModel']['cover_img'] }}" alt="">
+                                    </td> 
                                     
                                     <td class="product-name"><a href="#">{{ $item['name'] }} </a></td>
                                     <td class="product-price-cart"><span
@@ -44,7 +45,7 @@
                             </tbody>
                         </table>
                     </div>
-                    {{-- <div class="row">
+                    <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="coupon-all">
                                 <div class="coupon">
@@ -57,7 +58,7 @@
 
                             </div>
                         </div>
-                    </div> --}}
+                    </div>
                     <div class="row">
                         <div class="col-md-5 ml-auto">
                             <div class="cart-page-total">

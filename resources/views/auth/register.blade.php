@@ -1,10 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<div>
+    <div class="block-banner-img">
+        <img class="login-banner-img" src="./assets/img/banner/loginbanner.jpg" alt="">
+    </div>
+</div>
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <div class="card">
+            <div class="card register">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -60,9 +65,13 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-
+                        <div class="form-group mb-3 card-body-recaptcha">
+                            <strong>Google recaptcha :</strong>
+                            {!! NoCaptcha::renderJs() !!}
+                            {!! NoCaptcha::display() !!}
+                        </div>
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-10 offset-md-2">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>

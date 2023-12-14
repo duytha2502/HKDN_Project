@@ -43,7 +43,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
-                        @can('customer')
+                        @can('seller')
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('shops.create') }}">Open Your Shop</a>
                             </li>
@@ -92,7 +92,7 @@
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                    style="display: none;">
+                                    >
                                     @csrf
                                 </form>
                             </div>

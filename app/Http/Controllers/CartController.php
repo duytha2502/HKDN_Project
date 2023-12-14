@@ -16,6 +16,7 @@ class CartController extends Controller
             'id' => $product->id,
             'name' => $product->name,
             'description'=> $product->description,
+            'cover_img' => $product->cover_img,
             'price' => $product->price,
             'quantity' => 1,
             'attributes' => array(),

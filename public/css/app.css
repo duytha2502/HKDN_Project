@@ -75,9 +75,28 @@ body {
   background-color: #f8fafc;
 }
 
+.card-body-recaptcha {
+  position: relative;
+  left: 14%;
+}
+
+.create-shop-block {
+  width: 50%;
+  margin-left: 25%;
+}
+
+.cart-checkout-block {
+  width: 50%;
+  margin-left: 25%;
+}
+
 .block-banner-img{
   width: 50%;
   float:left;
+}
+
+div.register {
+  margin-right: -30%;
 }
 
 .login {
@@ -86,7 +105,8 @@ body {
 }
 
 .login-banner-img{
-  width: 100%;
+  width: 110%;
+  margin-left: -10%;
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -672,8 +692,8 @@ pre code {
   display: -webkit-box;
   display: flex;
   flex-wrap: wrap;
-  margin-right: 30px;
-  margin-left: -20px;
+  margin-right: 10%;
+  margin-left: -5%;
 }
 
 .no-gutters {
@@ -2914,6 +2934,7 @@ fieldset:disabled a.btn {
   color: #fff;
   background-color: #3490dc;
   border-color: #3490dc;
+  width: 100%;
 }
 
 .btn-primary:hover {
@@ -5264,7 +5285,7 @@ input[type=button].btn-block {
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-radius: 0.25rem;
-  margin-right: 70px;
+  margin-right: -10%;
 }
 
 .card > hr {

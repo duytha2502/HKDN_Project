@@ -11,6 +11,9 @@
 |
 */
 
+use App\Http\Controllers\GoogleController;
+// use App\Http\Controllers\FacebookController;
+
 Route::redirect('/', '/home');
 
 Auth::routes([
@@ -55,3 +58,11 @@ Route::group(['prefix' => 'seller', 'middleware' => 'auth', 'as' => 'seller.', '
 
     Route::get('/orders/delivered/{suborder}',  'OrderController@markDelivered')->name('order.delivered');
 });
+
+//Google login URL
+Route::get('auth/google',[GoogleController::class,'redirect'])->name('google-auth');
+Route::get('auth/google/callback',[GoogleController::class,'callbackGoogle']);
+
+//Facebook login URL
+// Route::get('auth/facebook',[FacebookController::class,'redirect'])->name('facebook-auth');
+// Route::get('auth/facebook/callback',[FacebookController::class,'callbackFacebook']);

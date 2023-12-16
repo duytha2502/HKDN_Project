@@ -37,7 +37,9 @@ class AppServiceProvider extends ServiceProvider
             });
 
             view()->share('categories', $categories);
-        }
+        }  
 
     }
+    
+
 }

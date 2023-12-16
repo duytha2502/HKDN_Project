@@ -85,10 +85,14 @@
                         <p class="sign-in-diff_txt">Or</p>
                         <div class="sign-in-diff_btn">
                             <button type="button" class="google-sign-in-button" >
-                                Sign in with Google
+                                <a href="{{ route('google-auth') }}">
+                                    Sign in with Google
+                                </a>
                             </button>
                             <button type="button" class="facebook-sign-in-button" >
+                            <a href="">
                                 Sign in with Facebook
+                            </a>
                             </button>
                         </div>
                     </div>

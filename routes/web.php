@@ -12,7 +12,7 @@
 */
 
 use App\Http\Controllers\GoogleController;
-// use App\Http\Controllers\FacebookController;
+use App\Http\Controllers\FacebookController;
 
 Route::redirect('/', '/home');
 
@@ -64,5 +64,5 @@ Route::get('auth/google',[GoogleController::class,'redirect'])->name('google-aut
 Route::get('auth/google/callback',[GoogleController::class,'callbackGoogle']);
 
 //Facebook login URL
-// Route::get('auth/facebook',[FacebookController::class,'redirect'])->name('facebook-auth');
-// Route::get('auth/facebook/callback',[FacebookController::class,'callbackFacebook']);
+Route::get('auth/facebook',[FacebookController::class,'redirect'])->name('facebook-auth');
+Route::get('auth/facebook/callback',[FacebookController::class,'callbackFacebook']);

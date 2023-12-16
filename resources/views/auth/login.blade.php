@@ -90,7 +90,7 @@
                                 </a>
                             </button>
                             <button type="button" class="facebook-sign-in-button" >
-                            <a href="">
+                            <a href="{{ route('facebook-auth') }}">
                                 Sign in with Facebook
                             </a>
                             </button>

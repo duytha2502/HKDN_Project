@@ -55,7 +55,6 @@
                                         <input class="button" name="apply_coupon" value="Apply coupon" type="submit">
                                     </form>
                                 </div>
-
                             </div>
                         </div>
                     </div>

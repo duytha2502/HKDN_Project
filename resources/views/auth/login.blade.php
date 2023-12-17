@@ -13,7 +13,10 @@
                 <div class="card-header">
                     <a id="card-header-title">{{ __('Login') }}</a></div>
                 <div class="card-body">
+                    <br>
                     <div class="card-body-wel row">
+                        <br>
+                        <br>
                         <div class="card-body-wel_txt">
                             <p class="wel-txt"> Wellcome to </p>
                         </div>
@@ -94,6 +97,11 @@
                                 Sign in with Facebook
                             </a>
                             </button>
+                            <button type="button" class="github-sign-in-button" >
+                                <a href="{{ route('github-auth') }}">
+                                    Sign in with Github
+                                </a>
+                                </button>
                         </div>
                     </div>
                     </div>

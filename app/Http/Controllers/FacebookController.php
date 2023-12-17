@@ -4,26 +4,27 @@ namespace App\Http\Controllers;
 
 use Laravel\Socialite\Facades\Socialite;
 use App\User;
+use Illuminate\Support\Facades\Log;
 
-class GoogleController extends Controller
+class FacebookController extends Controller
 {
     public function redirect() {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver('facebook')->redirect();
     }
 
-    public function callbackGoogle() {
+    public function callbackFacebook() {
 
         try {      
-            $google_user = Socialite::driver("google")->user();
+            $facebook_user = Socialite::driver("facebook")->user();
 
-            $user = User::where('provider_id', $google_user->id)->first();
+            $user = User::where('provider_id', $facebook_user->id)->first();
             
         if (!$user) {
             $data = [
                 'role_id' => 2,
-                'provider_id' => $google_user->id,
-                'name' => $google_user->name,
-                'email' => $google_user->id . $google_user->email,
+                'provider_id' => $facebook_user->id,
+                'name' => $facebook_user->name,
+                'email' => $facebook_user->id . $facebook_user->email,
             ];
 
             $userConnected = User::create($data);
@@ -34,7 +35,7 @@ class GoogleController extends Controller
             auth()->login($user);
             return redirect()->route('home');
         } catch (\Throwable $th) {
-            // dd('sth went wrong', $th->getMessage());
+            Log::error($th->getMessage());
             return redirect()->route('login');
         }
     }

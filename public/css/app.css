@@ -693,7 +693,7 @@ pre code {
   display: flex;
   flex-wrap: wrap;
   margin-right: 10%;
-  margin-left: -5%;
+  /* margin-left: -5%; */
 }
 
 .no-gutters {
@@ -5307,7 +5307,7 @@ input[type=button].btn-block {
   -webkit-box-flex: 1;
           flex: 1 1 auto;
   min-height: 1px;
-  padding: 1.25rem;
+  /* padding: 1.25rem; */
 }
 
 .card-body-wel {
@@ -5435,7 +5435,9 @@ input[type=button].btn-block {
 
 .sign-in-diff_btn {
   position: relative;
-  text-align: center;
+  display: flex;
+  flex-flow: wrap-reverse;
+  justify-content: space-around;
 }
 
 .sign-in-diff_txt {
@@ -5456,7 +5458,6 @@ input[type=button].btn-block {
   border-radius: 3px;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
   
-  color: #757575;
   font-size: 1rem;
   font-weight: 500;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
@@ -5482,6 +5483,10 @@ input[type=button].btn-block {
       0 -1px 0 rgba(0, 0, 0, .04),
       0 2px 4px rgba(0, 0, 0, .25),
       0 0 0 3px #c8dafc;
+}
+
+.google-sign-in-button  a{
+  color: #757575;
 }
 
 .facebook-sign-in-button {
@@ -5514,6 +5519,48 @@ input[type=button].btn-block {
 }
 
 .facebook-sign-in-button:active {
+  outline: none;
+      box-shadow: 
+      0 -1px 0 rgba(0, 0, 0, .04),
+      0 2px 4px rgba(0, 0, 0, .25),
+      0 0 0 3px #c8dafc;
+}
+
+.github-sign-in-button {
+  cursor: pointer;
+  transition: background-color .3s, box-shadow .3s;
+      
+  padding: 12px 0px 10px 42px;
+  margin-bottom: 2%;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
+  
+  color: #757575;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+  
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBkPSJNMTIgMGMtNi42MjYgMC0xMiA1LjM3My0xMiAxMiAwIDUuMzAyIDMuNDM4IDkuOCA4LjIwNyAxMS4zODcuNTk5LjExMS43OTMtLjI2MS43OTMtLjU3N3YtMi4yMzRjLTMuMzM4LjcyNi00LjAzMy0xLjQxNi00LjAzMy0xLjQxNi0uNTQ2LTEuMzg3LTEuMzMzLTEuNzU2LTEuMzMzLTEuNzU2LTEuMDg5LS43NDUuMDgzLS43MjkuMDgzLS43MjkgMS4yMDUuMDg0IDEuODM5IDEuMjM3IDEuODM5IDEuMjM3IDEuMDcgMS44MzQgMi44MDcgMS4zMDQgMy40OTIuOTk3LjEwNy0uNzc1LjQxOC0xLjMwNS43NjItMS42MDQtMi42NjUtLjMwNS01LjQ2Ny0xLjMzNC01LjQ2Ny01LjkzMSAwLTEuMzExLjQ2OS0yLjM4MSAxLjIzNi0zLjIyMS0uMTI0LS4zMDMtLjUzNS0xLjUyNC4xMTctMy4xNzYgMCAwIDEuMDA4LS4zMjIgMy4zMDEgMS4yMy45NTctLjI2NiAxLjk4My0uMzk5IDMuMDAzLS40MDQgMS4wMi4wMDUgMi4wNDcuMTM4IDMuMDA2LjQwNCAyLjI5MS0xLjU1MiAzLjI5Ny0xLjIzIDMuMjk3LTEuMjMuNjUzIDEuNjUzLjI0MiAyLjg3NC4xMTggMy4xNzYuNzcuODQgMS4yMzUgMS45MTEgMS4yMzUgMy4yMjEgMCA0LjYwOS0yLjgwNyA1LjYyNC01LjQ3OSA1LjkyMS40My4zNzIuODIzIDEuMTAyLjgyMyAyLjIyMnYzLjI5M2MwIC4zMTkuMTkyLjY5NC44MDEuNTc2IDQuNzY1LTEuNTg5IDguMTk5LTYuMDg2IDguMTk5LTExLjM4NiAwLTYuNjI3LTUuMzczLTEyLTEyLTEyeiIvPjwvc3ZnPg==);
+  background-color: white;
+  background-repeat: no-repeat;
+  background-position: 12px 14px;
+  background-size: 12%;
+}
+
+.github-sign-in-button a {
+  color: black;
+}
+
+.github-sign-in-button:hover {
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
+}
+
+.github-sign-in-button:active {
+  background-color: #eeeeee;
+}
+
+.github-sign-in-button:active {
   outline: none;
       box-shadow: 
       0 -1px 0 rgba(0, 0, 0, .04),

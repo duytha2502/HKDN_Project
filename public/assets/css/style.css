@@ -6722,7 +6722,7 @@ thead {
     color: #555;
     font-size: 13px;
     height: 42px;
-    width: 120px;
+    width: 50%;
 }
 .coupon2 input {
     width: inherit;
@@ -6752,7 +6752,7 @@ thead {
     margin-top: 30px;
 }
 .coupon {
-    float: left;
+    float: right;
 }
 .coupon2 {
     float: right;

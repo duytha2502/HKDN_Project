@@ -49,10 +49,14 @@
                     <ul>
                         @if (auth()->guard('web')->user() && auth()->guard('web')->user()->role_id == 2)
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('shops.create') }}">Open Your Shop</a>
+                            <a class="nav-link" href="{{ route('shops.create') }}">Become a Seller</a>
+                        </li>
+                        @else
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('seller.orders.index') }}">Open Your Shop</a>
                         </li>
                         @endif
-                        <li><a href="#"><i class="pe-7s-users"></i>My Account</a></li>
+                        <li><a href="#"><i class="pe-7s-users"></i>{{ Auth::user()->name }}</a></li>
                         {{-- <li><a data-toggle="modal" data-target="#exampleCompare" href="#"><i
                                     class="pe-7s-repeat"></i>Compare</a></li>
                         <li><a href="wishlist.html"><i class="pe-7s-like"></i>Wishlist</a></li> --}}
@@ -173,8 +177,8 @@
                                         <span>Address:</span>
                                     </div>
                                     <div class="footer-info-content2">
-                                        <p>77 Seventh Streeth Banasree
-                                            <br>Road Rampura -2100 Dhaka</p>
+                                        <p>48 Cao Thang street
+                                            <br>Hai Chau, thanh pho Da Nang</p>
                                     </div>
                                 </div>
                                 <div class="footer-address-electro">
@@ -182,8 +186,8 @@
                                         <span>Phone:</span>
                                     </div>
                                     <div class="footer-info-content2">
-                                        <p>+11 (019) 2518 4203
-                                            <br>+11 (251) 2223 3353</p>
+                                        <p>+84 788024737
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="footer-address-electro">
@@ -191,8 +195,8 @@
                                         <span>Email:</span>
                                     </div>
                                     <div class="footer-info-content2">
-                                        <p><a href="#">domain@mail.com</a>
-                                            <br><a href="#">company@domain.info</a></p>
+                                        <p><a href="#">ezoneoffical@gmail.com</a>
+                                            <br><a href="#">duythai2502@gmail.com</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -253,7 +257,7 @@
                             </div>
                             <div class="footer-services-content">
                                 <h3>Free Shipping</h3>
-                                <p>Free Shipping on Bangladesh</p>
+                                <p>Free Shipping all over VietNam</p>
                             </div>
                         </div>
                     </div>
@@ -264,7 +268,7 @@
                             </div>
                             <div class="footer-services-content">
                                 <h3>Money Guarentee</h3>
-                                <p>Free Shipping on Bangladesh</p>
+                                <p>Up to 100%</p>
                             </div>
                         </div>
                     </div>
@@ -275,7 +279,7 @@
                             </div>
                             <div class="footer-services-content">
                                 <h3>Online Support</h3>
-                                <p>Free Shipping on Bangladesh</p>
+                                <p>Hotlinen24/7</p>
                             </div>
                         </div>
                     </div>
@@ -300,7 +304,7 @@
                         <div class="copyright f-right mrg-5">
                             <p>
                                 Copyright ©
-                                <a href="https://hastech.company/">HasTech</a> 2018 . All Right Reserved.
+                                <a href="https://github.com/duytha2502/HKDN_Project">DarkTeam</a> 2023 . All Right Reserved.
                             </p>
                         </div>
                     </div>

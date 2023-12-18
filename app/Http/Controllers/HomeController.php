@@ -31,6 +31,7 @@ class HomeController extends Controller
         $products = Product::with('shop.owner')->take(30)->get();
 
         $categories = Category::with('children.children')->whereNull('parent_id')->get();
+        $products = Product::paginate(12);
 
         return view('home', ['allProducts' => $products,'categories'=>$categories]);
     }

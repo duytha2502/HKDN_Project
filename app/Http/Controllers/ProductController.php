@@ -36,16 +36,14 @@ class ProductController extends Controller
 
         $query = $request->input('query');
 
-        $products = Product::where('name','LIKE',"%$query%")->paginate(10);
+        $products = Product::where('name','LIKE',"%$query%")->paginate(8);
 
         return view('product.catalog',compact('products'));
     }
 
     public function show(Product $product)
     {
-
         return view('product.show', compact('product'));
-
     }
 
 

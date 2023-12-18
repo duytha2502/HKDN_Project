@@ -12,19 +12,19 @@
     <link rel="shortcut icon" type="image/x-icon" href="/assets/img/logo/android-icon-96x96.png">
 
     <!-- all css here -->
-    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="/assets/css/animate.css">
-    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="/assets/css/themify-icons.css">
-    <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.css">
-    <link rel="stylesheet" href="/assets/css/icofont.css">
-    <link rel="stylesheet" href="/assets/css/meanmenu.min.css">
-    <link rel="stylesheet" href="/assets/css/jquery-ui.css">
-    <link rel="stylesheet" href="/assets/css/bundle.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/css/responsive.css">
-
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/animate.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/owl.carousel.min.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/themify-icons.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/pe-icon-7-stroke.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/icofont.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/meanmenu.min.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/jquery-ui.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/bundle.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/style.css" type='text/css'>
+    <link rel="stylesheet" href="/assets/css/responsive.css" type='text/css'>
+    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
 
     @livewireStyles
 
@@ -257,7 +257,7 @@
                             </div>
                             <div class="footer-services-content">
                                 <h3>Free Shipping</h3>
-                                <p>Free Shipping all over VietNam</p>
+                                <p>Free shipping all over VietNam</p>
                             </div>
                         </div>
                     </div>
@@ -279,7 +279,7 @@
                             </div>
                             <div class="footer-services-content">
                                 <h3>Online Support</h3>
-                                <p>Hotlinen24/7</p>
+                                <p>Hotline 24/7</p>
                             </div>
                         </div>
                     </div>

@@ -2432,10 +2432,9 @@ a.banner-book-style-btn:hover {
 .category-common3::before {
     background: #c6c6c6 none repeat scroll 0 0;
     content: "";
-    height: 240px;
+    height: 40px;
     left: 0;
     position: absolute;
-    top: 30px;
     width: 1px;
 }
 .category-common4::before {
@@ -2447,10 +2446,17 @@ a.banner-book-style-btn:hover {
     top: 30px;
     width: 1px;
 }
-.category-common4:first-child::before,
+
+/* .category-common4:first-child::before,
 .category-common3:first-child::before {
     display: none;
 }
+
+.category-common4:nth-child(4)::before,
+.category-common3:nth-child(4):before {
+    display: none;
+} */
+
 .category-menu-list ul li .category-common h4,
 .category-menu-list ul li .category-common2 h4 {
     font-size: 14px;
@@ -2572,6 +2578,7 @@ a.banner-book-style-btn:hover {
     display: inline-block;
     position: relative;
     margin: 0 45px;
+    left: -30%;
 }
 .menu-style-3 nav > ul > li > a {
     color: #f3f3f3;
@@ -7381,19 +7388,26 @@ h5.panel-title {
 .shop-tab a:hover {
     color: #050035;
 }
+
+.pagination-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .pagination-style ul li {
-    display: inline-block;
+    /* display: inline-block; */
     margin: 0 3px;
 }
 .pagination-style ul li a {
     background-color: #f6f6f6;
     color: #3f3f3f;
-    display: inline-block;
-    font-size: 13px;
+    /* display: inline-block; */
+    /* font-size: 13px; */
     font-weight: 500;
-    height: 40px;
-    line-height: 41px;
-    width: 40px;
+    /* height: 40px; */
+    /* line-height: 41px; */
+    /* width: 40px; */
 }
 .pagination-style ul li.active a,
 .pagination-style ul li a:hover {

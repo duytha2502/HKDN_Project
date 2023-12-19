@@ -37,11 +37,9 @@ class AppServiceProvider extends ServiceProvider
             $categories = cache()->remember('categories','3600', function(){
                 return Category::whereNull('parent_id')->get();
             });
-
+            // dd($categories);
             view()->share('categories', $categories);
         }  
 
     }
-    
-
 }

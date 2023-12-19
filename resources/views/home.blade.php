@@ -7,7 +7,8 @@
         <div class="categories-menu">
 
             <div class="category-heading">
-                <h3> All Departments </h3>
+                    <a href="{{route('products.index')}}"> All Products 
+                    </a>
             </div>
 
             @include('_category-list')
@@ -53,11 +54,14 @@
 
                 <div id="electro1">
                     <div class="custom-row-2">
-
                         @foreach($allProducts as $product)
                             @include('product._single_product')
                         @endforeach
-
+                        <div class="pagination-style pagination-all-products mt-30 text-center">
+                            <div class="pagination-block">
+                                {{$allProducts->appends(['query'=>request('query')])->render()}}
+                            </div>
+                        </div>
                     </div>
                 </div>
 

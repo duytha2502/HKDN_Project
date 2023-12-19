@@ -26,6 +26,9 @@ Route::get('/contact', 'HomeController@contact')->name('contact');
 
 
 Route::get('/products/search', 'ProductController@search')->name('products.search');
+Route::get('/products/sortASC', 'ProductController@sortASC')->name('products.sortASC');
+Route::get('/products/sortDESC', 'ProductController@sortDESC')->name('products.sortDESC');
+Route::get('/products/sortNewest', 'ProductController@sortNewest')->name('products.sortNewest');
 Route::resource('products', 'ProductController');
 
 Route::get('/add-to-cart/{product}', 'CartController@add')->name('cart.add')->middleware('auth');

@@ -96,7 +96,7 @@
                     </div>
                     <div class="sidebar-widget mb-50">
                         <h3 class="sidebar-title">Top rated products</h3>
-                        <div class="sidebar-top-rated-all">
+                        {{-- <div class="sidebar-top-rated-all">
                             <div class="sidebar-top-rated mb-30">
                                 <div class="single-top-rated">
                                     <div class="top-rated-img">
@@ -177,7 +177,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>
@@ -189,31 +189,40 @@
                                 <div class="shop-found">
                                     <p><span>{{$products->total()}}</span> Products Found </p>
                                 </div>
-                                <div class="shop-selector">
-                                    <label for="">Sort By: </label>
-                                    <select name="orderby" id="" class="use-chosen" wire:model="sorting">
-                                        <option value="default" class="" selecte="selected">Default</option>
-                                        <option value="price" class="">Sort by price: Low to High</option>
-                                        <option value="price-desc" class="">Sort by price: High to Low</option>
-                                    </select>
+                                {{-- <div class="shop-selector">
+                                    <div class="shop-seclector-label">
+                                        <label >Sort By: </label>
+                                    </div>
+                                    <div class="shop-selector-sort">
+                                        <form action="{{ route('products.sortNewest') }}" method="GET">
+                                            <button class="">Newest</button>
+                                        </form>
+                                        <form action="{{ route('products.sortASC') }}" method="GET">
+                                            <button class="">Price: Low to High</button>
+                                        </form>
+                                        <form action="{{ route('products.sortDESC') }}" method="GET">
+                                            <button class="">Price: High to Low</button>
+                                        </form>
+                                    </div>
+                                </div> --}}
+                            </div>
+                            <div class="shop-fillter-tab">
+                                <div class="shop-tab nav" role=tablist>
+                                    <a href="#grid-sidebar1" class="active" data-toggle="tab" role="tab"
+                                        aria-selected="false">
+                                        <i class="ti-layout-grid4-alt"></i>
+                                    </a>
+                                    <a href="#grid-sidebar2" data-toggle="tab" role="tab" aria-selected="true">
+                                        <i class="ti-menu"></i>
+                                    </a>
                                 </div>
                             </div>
-                        <div class="shop-fillter-tab">
-                            <div class="shop-tab nav" role=tablist>
-                                <a href="#grid-sidebar1" class="active" data-toggle="tab" role="tab" aria-selected="false">
-                                    <i class="ti-layout-grid4-alt"></i>
-                                </a>
-                                <a href="#grid-sidebar2" data-toggle="tab" role="tab" aria-selected="true">
-                                    <i class="ti-menu"></i>
-                                </a>
-                            </div>
-                        </div>
                         </div>
                         <div class="shop-product-content tab-content">
                             <div id="grid-sidebar1" class="tab-pane fade active show">
                                 <div class="row">
                                     @foreach($products as $product)
-                                            @include('product._single_product')
+                                    @include('product._single_product')
                                     @endforeach
                                 </div>
                             </div>
@@ -221,20 +230,11 @@
                         </div>
                     </div>
                     <div class="pagination-style mt-30 text-center">
-                        {{-- <ul>
-                            <li><a href="#"><i class="ti-angle-left"></i></a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">...</a></li>
-                            <li><a href="#">19</a></li>
-                            <li><a href="#"><i class="ti-angle-right"></i></a></li>
-                        </ul> --}}
                         <div class="pagination-block">
                             {{$products->appends(['query'=>request('query')])->render()}}
                         </div>
-                     </div>
+                    </div>
                 </div>
-                    {{-- {{$products->appends(['query'=>request('query')])->render()}} --}}
             </div>
         </div>
     </div>

@@ -24,7 +24,10 @@
     <link rel="stylesheet" href="/assets/css/bundle.css" type='text/css'>
     <link rel="stylesheet" href="/assets/css/style.css" type='text/css'>
     <link rel="stylesheet" href="/assets/css/responsive.css" type='text/css'>
-    {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> --}}
+    {{--
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    --}}
 
     @livewireStyles
 
@@ -42,7 +45,7 @@
                         <li><i class="pe-7s-mail"></i> <a href="#">darkteam@gmail.com</a></li>
                     </ul>
                     <ul class="navbar-nav mr-auto">
-                                       
+
                     </ul>
                 </div>
                 <div class="electronics-login-register">
@@ -53,7 +56,7 @@
                         </li>
                         @else
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('seller.orders.index') }}">Open Your Shop</a>
+                            <a class="nav-link" href="{{ route('seller.orders.index') }}">Your Shop</a>
                         </li>
                         @endif
                         <li><a href="#"><i class="pe-7s-users"></i>{{ Auth::user()->name }}</a></li>
@@ -65,17 +68,17 @@
                         <li>
                             <form action=" {{ url('/logout') }} " method="POST">
                                 @csrf
-                                    <input type="submit" value="Logout" />
+                                <input style="cursor: pointer;" type="submit" value="Logout" />
                             </form>
                         </li>
-                            @else
+                        @else
 
-                            <li>
-                                <a href="{{url('/login')}}">Login</a>
-                            </li>
-                            <li>
-                                <a href="{{url('/register')}}">Sign Up</a>
-                            </li>
+                        <li>
+                            <a href="{{url('/login')}}">Login</a>
+                        </li>
+                        <li>
+                            <a href="{{url('/register')}}">Sign Up</a>
+                        </li>
                         @endauth
 
                     </ul>
@@ -113,13 +116,11 @@
                         </div>
                         <div class="same-style-text">
                             <a href="{{ route('cart.index') }}">My Cart <br>
-
                                 @auth
                                 {{Cart::session(auth()->id())->getContent()->count()}}
                                 @else
                                 0
                                 @endauth
-
                                 Item</a>
                         </div>
                     </div>
@@ -147,23 +148,23 @@
 
     @if(session('message'))
 
-        <div class="alert alert-success text-center" role="alert">
-            <strong>{{ session('message') }}</strong>
-        </div>
+    <div class="alert alert-success text-center" role="alert">
+        <strong>{{ session('message') }}</strong>
+    </div>
     @endif
 
     @if(session('error'))
 
-        <div class="alert alert-danger text-center" role="alert">
-            <strong>{{session('error')}} </strong>
-        </div>
+    <div class="alert alert-danger text-center" role="alert">
+        <strong>{{session('error')}} </strong>
+    </div>
     @endif
 
 
     @yield('content')
-
-
-
+    
+    <br>
+    <br>
     <footer class="footer-area">
         <div class="footer-top-3 black-bg pt-75 pb-25">
             <div class="container">
@@ -178,7 +179,8 @@
                                     </div>
                                     <div class="footer-info-content2">
                                         <p>48 Cao Thang street
-                                            <br>Hai Chau, thanh pho Da Nang</p>
+                                            <br>Hai Chau, thanh pho Da Nang
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="footer-address-electro">
@@ -196,7 +198,8 @@
                                     </div>
                                     <div class="footer-info-content2">
                                         <p><a href="#">ezoneoffical@gmail.com</a>
-                                            <br><a href="#">duythai2502@gmail.com</a></p>
+                                            <br><a href="#">duythai2502@gmail.com</a>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -304,7 +307,8 @@
                         <div class="copyright f-right mrg-5">
                             <p>
                                 Copyright ©
-                                <a href="https://github.com/duytha2502/HKDN_Project">DarkTeam</a> 2023 . All Right Reserved.
+                                <a href="https://github.com/duytha2502/HKDN_Project">DarkTeam</a> 2023 . All Right
+                                Reserved.
                             </p>
                         </div>
                     </div>

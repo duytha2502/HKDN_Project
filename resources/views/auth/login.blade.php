@@ -111,11 +111,6 @@
                                     Sign in with Github
                                 </a>
                                 </button>
-                                <button type="button" class="github-sign-in-button">
-                                    <a href="{{ route('github-auth') }}">
-                                        Sign in with Github
-                                    </a>
-                                </button>
                             </div>
                         </div>
                         <br>

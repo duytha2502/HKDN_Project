@@ -1,4 +1,3 @@
-@section('content')
 <div>
     {{-- In work, do what you enjoy. --}}
 
@@ -31,6 +30,7 @@
 
                                     <td class="product-thumbnail"><a href="#"></a>
                                         <img style="width: 100%" src="{{ $item['associatedModel']['cover_img'] }}" alt="">
+                                        <img style="width: 100%" src="{{ url('storage/'.$item['associatedModel']['cover_img']) }}" alt="">
                                     </td> 
                                     
                                     <td class="product-name"><a href="#">{{ $item['name'] }} </a></td>
@@ -74,8 +74,5 @@
             </div>
         </div>
     </div>
-
-
-
 </div>
-@endsection
+

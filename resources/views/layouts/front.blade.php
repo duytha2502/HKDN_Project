@@ -101,16 +101,18 @@
                         </form>
                     </div>
                 </div>
+                <form action="{{ route('customer.order') }}" method="GET">
                 <div class="trace-cart-wrapper">
                     <div class="trace same-style">
                         <div class="same-style-icon">
-                            <a href="#"><i class="pe-7s-plane"></i></a>
+                            <a href=""><i class="pe-7s-plane"></i></a>
                         </div>
                         <div class="same-style-text">
-                            <a href="#">Product <br>trace</a>
+                                <a href="{{ route('customer.order') }}">Product <br>trace</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="categories-cart same-style">
+                    </form>
+                        <div class="categories-cart same-style">
                         <div class="same-style-icon">
                             <a href="{{ route('cart.index') }}"><i class="pe-7s-cart"></i></a>
                         </div>

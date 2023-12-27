@@ -3,11 +3,23 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Order extends Model
 {
 
     protected $guarded = [];
+
+    /**
+     * Get all of the comments for the Order
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+
+    public function orderItems(): HasMany
+    {
+        return $this->hasMany(OrderItem::class, 'order_id', 'id');
+    }
 
     public function items()
     {
@@ -28,6 +40,12 @@ class Order extends Model
     public function subOrders()
     {
         return $this->hasMany(SubOrder::class);
+    }
+
+    public function subOrder()
+    {
+
+        return $this->belongsTo(SubOrder::class);
     }
 
     public function generateSubOrders()

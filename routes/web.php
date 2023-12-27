@@ -11,6 +11,7 @@
 |
 */
 
+use App\Http\Controllers\CustomerOrderController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\GithubController;
 // use App\Http\Controllers\FacebookController;
@@ -62,6 +63,13 @@ Route::group(['prefix' => 'seller', 'middleware' => 'auth', 'as' => 'seller.', '
 
     Route::get('/orders/delivered/{suborder}',  'OrderController@markDelivered')->name('order.delivered');
 });
+
+Route::get('customers/orders/index', [CustomerOrderController::class,'index'])->name('customer.order');
+Route::get('customers/orders/index/{orderId}', [CustomerOrderController::class,'show']);
+// Route::get('customers/orders/index/destroy/{orderId}', [CustomerOrderController::class,'destroy'])->name('customer.destroy');
+// Route::get('customers/orders/index/delivered/{suborder}',  'CustomerOrderController@markDelivered')->name('customers.orders.delivered');
+Route::get('customers/orders/index/delivered/{suborder}', [CustomerOrderController::class,'markCompleted'])->name('customers.orders.delivered');
+
 
 //Google login URL
 Route::get('auth/google',[GoogleController::class,'redirect'])->name('google-auth');

@@ -114,15 +114,14 @@
         <main class="py-4 container-fluid">
             <div class="row">
                 <div class="col-3">
-
                     <div class="list-group">
                         <a href="/seller" class="list-group-item list-group-item-action active">Dashboard</a>
+                        @if (auth()->guard('web')->user() && auth()->guard('web')->user()->role_id == 3)
                         <a href=" {{route('seller.orders.index')}} " class="list-group-item list-group-item-action">Orders</a>
                         <a href=" {{url('/admin/shops')}} " class="list-group-item list-group-item-action">Go to Shop</a>
+                        @endif
                     </div>
-
                 </div>
-
                 <div class="col-9">
                     @yield('content')
                 </div>

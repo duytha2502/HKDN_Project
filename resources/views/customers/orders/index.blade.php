@@ -25,8 +25,8 @@
                     <td>
                         {{$Order->status}}
                         
-                        @if($Order->status != 'completed')
-                            <a href=" {{route('customers.orders.delivered', $Order)}} " class="btn btn-primary btn-sm" style="width: fit-content">mark as completed</button>
+                        @if($Order->status != 'completed' & $Order->status != 'pending')
+                            <a href=" {{route('customers.orders.delivered', $Order)}} " class="btn btn-primary btn-sm" style="width: fit-content">mark completed</button>
                         @endif
                     </td>
 

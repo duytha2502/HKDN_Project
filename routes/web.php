@@ -12,11 +12,18 @@
 */
 
 use App\Http\Controllers\CustomerOrderController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\GithubController;
+use Srmklive\PayPal\Facades\PayPal;
 // use App\Http\Controllers\FacebookController;
 
 Route::redirect('/', '/home');
+
+Route::get('test', function(){
+    $provider = PayPal::setProvider();
+    dd($provider);    
+});
 
 Auth::routes([
     'verify' => true
@@ -38,6 +45,7 @@ Route::get('/cart/destroy/{itemId}', 'CartController@destroy')->name('cart.destr
 Route::get('/cart/update/{itemId}', 'CartController@update')->name('cart.update')->middleware('auth');
 Route::get('/cart/checkout', 'CartController@checkout')->name('cart.checkout')->middleware('auth');
 Route::get('/cart/apply-coupon', 'CartController@applyCoupon')->name('cart.coupon')->middleware('auth');
+// Route::get('coupon/clearCoupon', [CartController::class,'clearCoupon'])->name('cart.clearCoupon');
 
 Route::resource('orders', 'OrderController')->only('store')->middleware('auth');
 

@@ -54,6 +54,9 @@
                                             placeholder="Coupon code" type="text" required>
                                         <input class="button" name="apply_coupon" value="Apply coupon" type="submit">
                                     </form>
+                                    {{-- <form action="{{route('cart.clearCoupon')}}" method='get'>
+                                    <input class="button" name="apply_coupon" value="Clear coupon" type="submit">
+                                    </form> --}}
                                 </div>
                             </div>
                         </div>

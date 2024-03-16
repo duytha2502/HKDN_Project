@@ -60,7 +60,7 @@ class Order extends Model
                 'order_id'=> $this->id,
                 'seller_id'=> $shop->user_id ?? 1,
                 'grand_total'=> $products->sum('pivot.price'),
-                'item_count'=> $products->count()
+                'item_count'=> $products->count(),
             ]);
 
             foreach($products as $product) {

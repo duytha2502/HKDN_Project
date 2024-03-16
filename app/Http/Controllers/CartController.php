@@ -6,6 +6,7 @@ use App\Coupon;
 use App\Product;
 use Cart;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class CartController extends Controller
 {
@@ -37,7 +38,7 @@ class CartController extends Controller
     {
 
        \Cart::session(auth()->id())->remove($itemId);
-
+       
         return back();
     }
 
@@ -59,6 +60,12 @@ class CartController extends Controller
         return view('cart.checkout');
     }
 
+    // public function clearCoupon(Request $request)
+    // {
+    //     $request->session()->forget('coupon_code');
+    //     return view('cart.checkout');
+    // }
+
     public function applyCoupon()
     {
         $couponCode = request('coupon_code');
@@ -79,7 +86,6 @@ class CartController extends Controller
         ));
 
         Cart::session(auth()->id())->condition($condition); // for a speicifc user's cart
-
 
         return back()->withMessage('coupon applied');
 

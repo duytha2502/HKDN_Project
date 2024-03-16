@@ -49,10 +49,10 @@
                 <td width="10%">{{ $orderItem->quantity }}</td>
                 <td width="10%" style="font-weight:bold">${{ $orderItem->quantity * $orderItem->product->price}}</td>   
             @endforeach
-            {{-- <tr>
+            <tr>
                 <td colspan="5" style="font-weight:bold">Coupon</td>
-                <td colspan="1" style="font-weight:bold">{{ $order->coupons->code }}</td>
-            </tr> --}}
+                <td colspan="1" style="font-weight:bold"></td>
+            </tr>
             <tr>
                 <td colspan="5" style="font-weight:bold">Total Amount</td>
                 <td colspan="1" style="font-weight:bold">${{ $order->grand_total }}</td>
